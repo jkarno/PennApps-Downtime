@@ -16,9 +16,17 @@ var HomePage = React.createClass({
   },
   render() {
     return (
-      <div className="body">
-        
+      <div className="facebookButton">
+        <button type="button" onClick={this.handleFacebookClick}>Pull Facebook Data</button>
       </div>
+    );
+  },
+  handleFacebookClick(e) {
+    FB.api(
+      "/me",
+      function (response) {
+        console.log(response);
+      }
     );
   }
 });
