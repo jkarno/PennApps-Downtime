@@ -14,6 +14,21 @@ var ActionTypes = require('./constants/ActionTypes');
 // Export React so the dev tools can find it
 (window !== window.top ? window.top : window).React = React;
 
+window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '822942997823426',
+    xfbml      : true,
+    version    : 'v2.4'
+  });
+};
+
+(function(d, s, id){
+   var js, fjs = d.getElementsByTagName(s)[0];
+   if (d.getElementById(id)) {return;}
+   js = d.createElement(s); js.id = id;
+   js.src = "//connect.facebook.net/en_US/sdk.js";
+   fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
 /**
  * Check if Page component has a layout property; and if yes, wrap the page
  * into the specified layout, then mount to document.body.
