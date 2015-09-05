@@ -15,8 +15,7 @@ var DefaultLayout = React.createClass({
   },
   getDefaultProps() {
     return {
-      title: 'React.js Starter Kit',
-      description: 'A skeleton for an isomorphic web application (SPA) built with React.js and Flux'
+      title: 'SocialMind',
     };
   },
   render() {
@@ -28,8 +27,8 @@ var DefaultLayout = React.createClass({
     ) : (
       <div className="jumbotron">
         <div className="container text-center">
-          <h1>React</h1>
-          <p>Complex web apps made easy</p>
+          <h1>SocialMind</h1>
+          <p>Creating A Social Awareness Of Your Social Media</p>
         </div>
       </div>
     );
@@ -42,9 +41,8 @@ var DefaultLayout = React.createClass({
         <div className="navbar-footer">
           <div className="container">
             <p className="text-muted">
-              <span>© KriaSoft</span>
+              <span>© RogoCut</span>
               <span><Link to="/">Home</Link></span>
-              <span><Link to="/privacy">Privacy</Link></span>
             </p>
           </div>
         </div>
